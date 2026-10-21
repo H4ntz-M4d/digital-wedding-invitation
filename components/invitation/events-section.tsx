@@ -32,20 +32,18 @@ export function EventsSection() {
                   <MapPin className="size-4 text-primary" aria-hidden />
                   {wedding.venue.name}
                 </p>
-                <p className="text-sm leading-relaxed text-muted-foreground text-pretty">{event.note}</p>
                 <a
                   href={googleCalendarUrl({
                     title: `${event.title}: ${wedding.groom.nickname} & ${wedding.bride.nickname}`,
                     start: event.start,
                     location: `${wedding.venue.name}, ${wedding.venue.address}`,
-                    details: event.note,
                   })}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={buttonVariants({ variant: 'outline', size: 'sm', className: 'mt-auto rounded-full' })}
                 >
                   <CalendarPlus className="size-4" aria-hidden />
-                  Add to calendar
+                  Tambahkan ke Kalender
                   <span className="sr-only">(opens in a new tab)</span>
                 </a>
               </article>

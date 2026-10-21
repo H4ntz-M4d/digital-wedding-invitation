@@ -1,7 +1,7 @@
-import Image from 'next/image'
-import { wedding } from '@/config/wedding'
-import { formatEventDate } from '@/lib/format'
-import { Reveal } from './reveal'
+import Image from "next/image";
+import { wedding } from "@/config/wedding";
+import { formatEventDate } from "@/lib/format";
+import { Reveal } from "./reveal";
 
 export function OpeningSection() {
   return (
@@ -29,7 +29,9 @@ export function OpeningSection() {
         </Reveal>
         <Reveal delay={100}>
           <h2 className="font-display text-5xl text-balance sm:text-7xl">
-            {wedding.groom.nickname} <span className="italic text-gold">&amp;</span> {wedding.bride.nickname}
+            {wedding.groom.nickname}{" "}
+            <span className="italic text-gold">&amp;</span>{" "}
+            {wedding.bride.nickname}
           </h2>
         </Reveal>
         <Reveal delay={200}>
@@ -38,6 +40,10 @@ export function OpeningSection() {
           </p>
         </Reveal>
         <Reveal delay={300}>
+          <Image height={300} width={300} src={"/images/wedding-people-art.png"} alt="Wedding People Art" />
+        </Reveal>
+        
+        <Reveal delay={400}>
           <blockquote className="max-w-xl">
             <p className="font-display text-xl italic leading-relaxed text-pretty sm:text-2xl">
               &ldquo;{wedding.opening.verse}&rdquo;
@@ -47,12 +53,12 @@ export function OpeningSection() {
             </footer>
           </blockquote>
         </Reveal>
-        <Reveal delay={400}>
+        <Reveal delay={500}>
           <p className="max-w-lg leading-relaxed text-muted-foreground text-pretty">
             {wedding.opening.message}
           </p>
         </Reveal>
       </div>
     </section>
-  )
+  );
 }

@@ -4,7 +4,6 @@ import { getApprovedWishes } from '@/lib/wishes'
 import { ClosingSection } from './closing-section'
 import { CoupleSection } from './couple-section'
 import { EventsSection } from './events-section'
-import { GallerySection } from './gallery-section'
 import { GiftSection } from './gift-section'
 import { InvitationShell } from './invitation-shell'
 import { OpeningSection } from './opening-section'
@@ -37,7 +36,6 @@ export async function InvitationPage({
         <EventsSection />
         <VenueSection />
         <StorySection />
-        <GallerySection />
         <GiftSection />
         <RsvpSection
           inviteState={inviteState}

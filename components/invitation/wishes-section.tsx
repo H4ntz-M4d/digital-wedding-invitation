@@ -57,7 +57,7 @@ export function WishesSection({ wishes, token, guestName }: WishesSectionProps) 
           <p className="eyebrow">Wishes</p>
           <h2 className="font-display mt-3 text-4xl sm:text-5xl">Words of love</h2>
           <p className="mx-auto mt-4 max-w-md text-muted-foreground text-pretty">
-            Leave a wish or a prayer for the couple. Wishes appear after the couple approves them.
+            Tuliskan harapan atau doa untuk pasangan tersebut. Harapan akan muncul setelah disetujui oleh pasangan itu.
           </p>
         </Reveal>
 
@@ -65,10 +65,10 @@ export function WishesSection({ wishes, token, guestName }: WishesSectionProps) 
           {sent ? (
             <div role="status" className="rounded-2xl border border-border bg-card p-8 text-center shadow-sm">
               <MessageCircleHeart className="mx-auto size-8 text-primary" aria-hidden />
-              <p className="font-display mt-3 text-2xl">Thank you for your kind words</p>
-              <p className="mt-1 text-sm text-muted-foreground">Your wish is waiting for approval and will appear soon.</p>
+              <p className="font-display mt-3 text-2xl">Terima kasih atas kata-kata baik Anda</p>
+              <p className="mt-1 text-sm text-muted-foreground">Permintaan Anda sedang menunggu persetujuan dan akan segera muncul.</p>
               <Button variant="outline" className="mt-5 rounded-full" onClick={() => setSent(false)}>
-                Write another wish
+                Tuliskan harapan lain
               </Button>
             </div>
           ) : (
@@ -78,7 +78,7 @@ export function WishesSection({ wishes, token, guestName }: WishesSectionProps) 
               className="flex flex-col gap-5 rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-8"
             >
               <div className="flex flex-col gap-2">
-                <Label htmlFor="wish-name">Your name</Label>
+                <Label htmlFor="wish-name">Nama Anda</Label>
                 <Input
                   id="wish-name"
                   value={name}
@@ -89,7 +89,7 @@ export function WishesSection({ wishes, token, guestName }: WishesSectionProps) 
                 />
               </div>
               <div className="flex flex-col gap-2">
-                <Label htmlFor="wish-message">Your wish</Label>
+                <Label htmlFor="wish-message">Tulis Ucapan & doa restu</Label>
                 <Textarea
                   id="wish-message"
                   value={message}
@@ -122,7 +122,7 @@ export function WishesSection({ wishes, token, guestName }: WishesSectionProps) 
               )}
               <Button type="submit" disabled={submitting} className="rounded-full" size="lg">
                 {submitting && <Loader2 className="size-4 animate-spin" aria-hidden />}
-                Send wish
+                Kirim Ucapan
               </Button>
             </form>
           )}
@@ -131,7 +131,7 @@ export function WishesSection({ wishes, token, guestName }: WishesSectionProps) 
         <div className="w-full">
           {wishes.length === 0 ? (
             <p className="text-center text-sm text-muted-foreground">
-              Approved wishes will appear here. Be the first to leave one.
+              Ucapan yang disetujui akan muncul di sini. Jadilah orang pertama yang memberikan ucapan.
             </p>
           ) : (
             <ul className="flex max-h-[28rem] flex-col gap-4 overflow-y-auto pr-1" aria-label="Wishes for the couple">

@@ -40,13 +40,13 @@ export function RsvpSection({ inviteState, token, guest, initialRsvp }: RsvpSect
             <div className="rounded-2xl border border-border bg-card p-8 text-sm leading-relaxed text-muted-foreground shadow-sm">
               {inviteState === 'invalid' ? (
                 <p>
-                  This invitation link is invalid or is no longer active. Please contact the couple for a new
-                  personal link.
+                  Tautan undangan ini tidak valid atau sudah tidak aktif. Silakan hubungi pasangan tersebut untuk mendapatkan tautan baru.
+                  tautan pribadi.
                 </p>
               ) : (
                 <p>
-                  RSVP is available through your personal invitation link. Please open the link the couple sent
-                  you to confirm your attendance.
+                  Konfirmasi kehadiran (RSVP) dapat dilakukan melalui tautan undangan pribadi Anda. Silakan buka tautan yang dikirimkan pasangan 
+                  pengantin untuk mengkonfirmasi kehadiran Anda.
                 </p>
               )}
             </div>
@@ -119,15 +119,15 @@ function RsvpForm({
       >
         <CheckCircle2 className="size-10 text-primary" aria-hidden />
         <h3 className="font-display text-2xl">
-          {saved.attendanceStatus === 'attending' ? 'Thank you, we will see you there' : 'Thank you for letting us know'}
+          {saved.attendanceStatus === 'attending' ? 'Terima kasih, kami akan menemui Anda di sana' : 'Terima kasih telah memberi tahu kami'}
         </h3>
         <p className="text-sm text-muted-foreground">
           {saved.attendanceStatus === 'attending'
-            ? `We saved your RSVP for ${saved.guestCount} ${saved.guestCount === 1 ? 'guest' : 'guests'}.`
-            : 'You will be missed, and we are grateful for your prayers.'}
+            ? `Kami menyimpan RSVP anda untuk ${saved.guestCount} ${saved.guestCount === 1 ? 'guest' : 'guests'}.`
+            : 'Anda akan dirindukan, dan kami berterima kasih atas doa-doa Anda..'}
         </p>
         <Button variant="outline" className="mt-2 rounded-full" onClick={() => setSaved(null)}>
-          Change my response
+          Ubah response saya
         </Button>
       </div>
     )
@@ -145,17 +145,17 @@ function RsvpForm({
         <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Invitation for</p>
         <p className="font-display mt-1 text-3xl">{guest.name}</p>
         {initialRsvp && (
-          <p className="mt-2 text-sm text-primary">You have already responded. You can update your answer below.</p>
+          <p className="mt-2 text-sm text-primary">Anda telah selesai merespons. Anda dapat memperbarui jawaban Anda di bawah.</p>
         )}
       </div>
 
       <fieldset className="flex flex-col gap-3">
-        <legend className="mb-2 text-sm font-medium">Will you attend?</legend>
+        <legend className="mb-2 text-sm font-medium">Akan Anda hadir?</legend>
         <div className="grid grid-cols-2 gap-3">
           {(
             [
-              { value: 'attending', label: 'Joyfully attend' },
-              { value: 'declined', label: 'Regretfully decline' },
+              { value: 'attending', label: 'Hadir dengan senang hati' },
+              { value: 'declined', label: 'Menyesalkan harus menolak' },
             ] as const
           ).map((option) => (
             <label
@@ -183,7 +183,7 @@ function RsvpForm({
 
       {status === 'attending' && (
         <div className="flex flex-col gap-2">
-          <Label htmlFor="guest-count">Number of guests attending</Label>
+          <Label htmlFor="guest-count">Jumlah tamu yang akan hadir</Label>
           <select
             id="guest-count"
             value={count}
@@ -197,13 +197,13 @@ function RsvpForm({
             ))}
           </select>
           <p className="text-xs text-muted-foreground">
-            Your invitation allows up to {guest.partySizeLimit} {guest.partySizeLimit === 1 ? 'guest' : 'guests'}.
+            Undangan Anda mengizinkan hingga {guest.partySizeLimit} {guest.partySizeLimit === 1 ? 'tamu' : 'tamu'}.
           </p>
         </div>
       )}
 
       <div className="flex flex-col gap-2">
-        <Label htmlFor="rsvp-message">Note for the couple (optional)</Label>
+        <Label htmlFor="rsvp-message">Catatan untuk pasangan (opsional)</Label>
         <Textarea
           id="rsvp-message"
           value={message}
@@ -239,7 +239,7 @@ function RsvpForm({
 
       <Button type="submit" size="lg" disabled={submitting} className="rounded-full">
         {submitting && <Loader2 className="size-4 animate-spin" aria-hidden />}
-        {initialRsvp ? 'Update RSVP' : 'Send RSVP'}
+        {initialRsvp ? 'Perbarui RSVP' : 'Kirim RSVP'}
       </Button>
     </form>
   )

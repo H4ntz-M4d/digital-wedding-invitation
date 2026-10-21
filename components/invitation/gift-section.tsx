@@ -41,7 +41,7 @@ export function GiftSection() {
           <p className="mx-auto mt-4 max-w-lg text-muted-foreground text-pretty">{gift.message}</p>
         </Reveal>
 
-        <div className="grid w-full gap-5 sm:grid-cols-2">
+        <div className="grid w-full">
           {gift.accounts.map((account, index) => (
             <Reveal key={account.number} delay={index * 120}>
               <div className="flex h-full flex-col items-center gap-2 rounded-2xl border border-border bg-card p-6 shadow-sm">

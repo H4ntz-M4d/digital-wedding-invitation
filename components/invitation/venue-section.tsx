@@ -31,7 +31,7 @@ export function VenueSection() {
             className={buttonVariants({ size: 'lg', className: 'rounded-full px-8' })}
           >
             <Navigation className="size-4" aria-hidden />
-            Get directions
+            Petunjuk Arah
             <span className="sr-only">(opens in a new tab)</span>
           </a>
         </Reveal>

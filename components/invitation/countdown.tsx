@@ -20,10 +20,10 @@ export function Countdown({ target }: { target: string }) {
 
   const parts = splitCountdown(remaining ?? 0)
   const items = [
-    { label: 'Days', value: parts.days },
-    { label: 'Hours', value: parts.hours },
-    { label: 'Minutes', value: parts.minutes },
-    { label: 'Seconds', value: parts.seconds },
+    { label: 'Hari', value: parts.days },
+    { label: 'Jam', value: parts.hours },
+    { label: 'Menit', value: parts.minutes },
+    { label: 'Detik', value: parts.seconds },
   ]
 
   return (

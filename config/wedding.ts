@@ -9,7 +9,6 @@ export type Person = {
   nickname: string
   title: string
   parents: string
-  bio: string
   photo: string
   instagram?: string
 }
@@ -21,45 +20,42 @@ export type WeddingEvent = {
   start: string
   /** Display time range */
   timeLabel: string
-  note: string
 }
 
 export const wedding = {
-  slug: 'yusuf-delila',
-  timezone: 'Asia/Jakarta',
+  slug: 'wedding',
+  timezone: 'Asia/Makassar',
 
   groom: {
-    fullName: 'Yusuf Rahman, S.T.',
-    nickname: 'Yusuf',
-    title: 'The Groom',
-    parents: 'Son of Mr. Ahmad Rahman & Mrs. Siti Aminah',
-    bio: 'A quiet engineer with a loud laugh. He believes the best conversations happen over a second cup of coffee.',
+    fullName: 'Syarifuddin',
+    nickname: 'Uddin',
+    title: 'Pengantin Pria',
+    parents: 'Anak ke-2 dari Bapak Sattu (alm) & Ibu Hamo',
     photo: '/images/groom.png',
     instagram: 'https://instagram.com/yusuf.example',
   } satisfies Person,
 
   bride: {
-    fullName: 'Delila Putri, S.Pd.',
-    nickname: 'Delila',
-    title: 'The Bride',
-    parents: 'Daughter of Mr. Hasan Basri & Mrs. Nur Laila',
-    bio: 'A teacher with a gentle heart and a notebook full of plans. She finds beauty in small, ordinary mornings.',
+    fullName: 'Tri Rahyu Ramadhanni. R, S.S',
+    nickname: 'Dhanny',
+    title: 'Pengantin Wanita',
+    parents: 'Anak bungsu dari 3 bersaudara, anak Bapak Ramli Thaha & Ibu Suryati',
     photo: '/images/bride.png',
     instagram: 'https://instagram.com/delila.example',
   } satisfies Person,
 
   cover: {
-    image: '/images/cover.png',
+    image: '/images/cover.jpg',
     eyebrow: 'The Wedding Of',
     openLabel: 'Open Invitation',
   },
 
   opening: {
     verse:
-      'And among His signs is that He created for you spouses from among yourselves, that you may find tranquility in them.',
+      'Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.',
     verseSource: 'Ar-Rum 30:21',
     message:
-      'With joy and gratitude, together with our families, we invite you to celebrate the beginning of our life together.',
+      'Dengan sukacita dan rasa syukur, bersama keluarga kami, kami mengundang Anda untuk merayakan awal kehidupan kami bersama.',
   },
 
   /** Countdown target is the first event's start time. */
@@ -67,65 +63,50 @@ export const wedding = {
     {
       id: 'akad',
       title: 'Akad Nikah',
-      start: '2027-03-20T08:00:00+07:00',
-      timeLabel: '08:00 - 10:00 WIB',
-      note: 'The solemnization ceremony, attended by close family.',
+      start: '2026-10-31T10:00:00+08:00',
+      timeLabel: '10:00 - Selesai WITA',
     },
     {
-      id: 'reception',
-      title: 'Wedding Reception',
-      start: '2027-03-20T11:00:00+07:00',
-      timeLabel: '11:00 - 14:00 WIB',
-      note: 'Lunch reception. Please arrive on time and dress in soft, earthy tones.',
+      id: 'walimah',
+      title: 'Walimah',
+      start: '2026-10-31T10:00:00+08:00',
+      timeLabel: '10:00 - Selesai WITA',
     },
   ] satisfies WeddingEvent[],
 
   venue: {
-    name: 'Taman Asri Garden Hall',
-    address: 'Jl. Melati No. 12, Menteng, Jakarta Pusat 10310, Indonesia',
-    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Menteng+Jakarta+Pusat',
-    mapsEmbedUrl: 'https://www.google.com/maps?q=Menteng+Jakarta+Pusat&output=embed',
+    name: 'Perumahan Barombong Permai',
+    address: 'Jln. Abd. Kuddus Perum Barombong Permai no. C2, Bontoa, Kel. Barombong, Kec. Tamalate, Makassar',
+    mapsUrl: 'https://maps.app.goo.gl/QxRokkkduHDbUVqr8',
+    mapsEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d496.6657056022668!2d119.39334587669063!3d-5.211423227643377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbf1ddd901477db%3A0xcbfc991a74d2d6fd!2sBarombong%20Permai!5e0!3m2!1sid!2sid!4v1792515684096!5m2!1sid!2sid',
   },
 
   story: [
     {
-      year: '2018',
-      title: 'First Meeting',
-      text: 'We met at a friend’s study group. One borrowed pen and an awkward hello turned into hours of talking.',
+      id: '1',
+      title: 'Pertemuan Pertama',
+      text: 'Terjadi secara singkat saja, diawali dengan dikenalkan oleh sang anak dari pengantin pria di sebuah cafe yang secara singkat bercerita tentang pengalaman kegagalan berumah tangga.',
     },
     {
-      year: '2021',
-      title: 'Growing Together',
-      text: 'Through long distance, late-night calls, and shared dreams, we learned that home is a person.',
+      id: '2',
+      title: 'Saling Berkomitmen',
+      text: 'Setelah pertemuan pertama tersebut, selanjutnya disusul dengan 2x pertemuan untuk berbicara tentang visi misi pernikahan dan menentukan untuk berkomitmen.',
     },
     {
-      year: '2025',
-      title: 'The Proposal',
-      text: 'On a quiet evening with both families gathered, a simple question received the easiest yes.',
-    },
-    {
-      year: '2027',
-      title: 'Forever Begins',
-      text: 'We are ready to start our greatest chapter, and we would love for you to be part of it.',
+      id: '3',
+      title: 'Proposal',
+      text: 'Bertemu secara pribadi dengan keluarga inti pekan selanjutnya untuk pelamaran dengan melibatkan keluarga besar.',
     },
   ],
-
-  gallery: [
-    { src: '/images/gallery-1.png', alt: 'The couple walking together in a garden', ratio: 'portrait' },
-    { src: '/images/gallery-2.png', alt: 'The couple sharing a quiet moment', ratio: 'landscape' },
-    { src: '/images/gallery-3.png', alt: 'Hands joined with wedding rings', ratio: 'landscape' },
-    { src: '/images/gallery-4.png', alt: 'The couple laughing under soft light', ratio: 'portrait' },
-  ] as { src: string; alt: string; ratio: 'portrait' | 'landscape' }[],
 
   /** Set to null to hide the wedding gift section. */
   gift: {
     message:
-      'Your presence is the greatest gift. Should you wish to honor us with a gift, you may send it digitally.',
+      'Kehadiran Anda adalah anugerah terbesar. Jika Anda ingin memberikan tanda kasih, Anda dapat mengirimkannya secara digital..',
     accounts: [
-      { bank: 'Bank Central Asia (BCA)', number: '1234567890', holder: 'Yusuf Rahman' },
-      { bank: 'Bank Mandiri', number: '0987654321', holder: 'Delila Putri' },
+      { bank: 'Bank Syariah Indonesia', number: '7069129522', holder: 'Tri Rahayu' },
     ],
-    address: 'Jl. Kenanga No. 5, Jakarta Selatan 12140',
+    address: 'Jln. Abd. Kuddus Perum Barombong Permai no. C2, Bontoa, Kel. Barombong, Kec. Tamalate, Makassar',
   } as {
     message: string
     accounts: { bank: string; number: string; holder: string }[]
@@ -139,20 +120,20 @@ export const wedding = {
 
   closing: {
     message:
-      'It is an honor to have you share our happiness. Your prayers and presence will make our day complete.',
+      'Merupakan suatu kehormatan bagi kami atas kehadiran Anda untuk turut berbagi kebahagiaan ini. Doa dan kehadiran Anda akan menyempurnakan hari kami.',
     signoff: 'With love,',
-    names: 'Yusuf & Delila',
-    family: 'Along with the Rahman and Basri families',
+    names: 'Uddin & Dhanny',
+    family: 'Bersama keluarga besar kedua mempelai',
   },
 
   social: [
-    { label: 'Yusuf on Instagram', href: 'https://instagram.com/yusuf.example' },
-    { label: 'Delila on Instagram', href: 'https://instagram.com/delila.example' },
+    { label: 'Uddin on Instagram', href: 'https://instagram.com/yusuf.example' },
+    { label: 'Dhanny on Instagram', href: 'https://instagram.com/delila.example' },
   ],
 
   /** Prefilled WhatsApp message used by the admin share button. {name} and {url} are replaced. */
   whatsappTemplate:
-    'Assalamu’alaikum {name},\n\nWith joy, we invite you to the wedding of Yusuf & Delila. Please open your personal invitation here:\n{url}\n\nThank you, and we hope to see you there.',
+    'Assalamu’alaikum Warahmatullahi Wabarakatuh. {name},\n\nSegala puji bagi Allah SWT yang telah menciptakan makhluknya berpasang-pasangan. Dengan penuh rasa hormat perkenankan kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara pernikahan kami. \nInformasi lengkap acara kami cantumkan melalui link berikut:\n{url}\n\nMerupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i untuk berkenan hadir serta memberikan doa dan restu. \n\nSemoga Allah memberkahi dan menghimpunkan kami dalam kebaikan dunia dan akhirat. Aamiin.\n\nWassalamu’alaikum Warahmatullahi Wabarakatuh. Kami yang berbahagia,\n\nUddin & Dhanny',
 } as const
 
 export const weddingStart = new Date(wedding.events[0].start)

@@ -29,7 +29,6 @@ export function googleCalendarUrl(options: {
   start: string
   durationHours?: number
   location: string
-  details: string
 }): string {
   const start = new Date(options.start)
   const end = new Date(start.getTime() + (options.durationHours ?? 2) * 3_600_000)
@@ -38,7 +37,6 @@ export function googleCalendarUrl(options: {
     text: options.title,
     dates: `${toCalendarStamp(start)}/${toCalendarStamp(end)}`,
     location: options.location,
-    details: options.details,
   })
   return `https://calendar.google.com/calendar/render?${params.toString()}`
 }

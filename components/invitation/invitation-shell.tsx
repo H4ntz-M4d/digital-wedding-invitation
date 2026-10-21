@@ -69,7 +69,7 @@ export function InvitationShell({ guestName, children }: InvitationShellProps) {
           aria-hidden={opened}
           inert={opened}
           className={cn(
-            'fixed inset-0 z-50 flex flex-col items-center justify-end overflow-hidden text-white transition-transform duration-1000 ease-[cubic-bezier(0.76,0,0.24,1)]',
+            'fixed inset-0 z-50 flex flex-col items-center justify-center overflow-hidden text-white transition-transform duration-1000 ease-[cubic-bezier(0.76,0,0.24,1)]',
             opened && '-translate-y-full',
           )}
         >
@@ -83,7 +83,7 @@ export function InvitationShell({ guestName, children }: InvitationShellProps) {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/20" />
 
-          <div className="relative flex w-full max-w-md flex-col items-center gap-5 px-6 pb-14 text-center">
+          <div className="relative flex w-full max-w-md flex-col items-center gap-5 px-6 text-center">
             <p className="text-xs uppercase tracking-[0.4em] text-white/80">{wedding.cover.eyebrow}</p>
             <h1 className="font-display text-5xl leading-tight text-balance sm:text-6xl">
               {wedding.groom.nickname}
@@ -91,10 +91,10 @@ export function InvitationShell({ guestName, children }: InvitationShellProps) {
               {wedding.bride.nickname}
             </h1>
             <div className="mt-2 flex flex-col items-center gap-1">
-              <p className="text-xs uppercase tracking-[0.3em] text-white/70">Dear</p>
-              <p className="font-display text-2xl text-balance">{guestName ?? 'Honored Guest'}</p>
+              <p className="text-xs tracking-[0.3em] text-white/70">Yth. <br /> Bapak/Ibu/Saudara/i</p> <br />
+              <p className="font-display text-2xl text-balance">{guestName ?? 'Tamu Kehormatan'}</p>
               <p className="mt-1 text-xs text-white/70">
-                You are warmly invited to celebrate with us.
+                Anda diundang dengan hangat untuk merayakan bersama kami.
               </p>
             </div>
             <Button
