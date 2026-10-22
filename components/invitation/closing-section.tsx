@@ -41,6 +41,7 @@ export function ClosingSection() {
               </li>
             ))}
           </ul>
+          <p className='text-center text-sm text-muted-foreground mt-9'>Made by: <br />Ince Ahmad Muhadi U.</p>
         </Reveal>
       </div>
     </footer>
