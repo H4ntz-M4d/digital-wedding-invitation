@@ -61,6 +61,10 @@
   --radius: 0.625rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

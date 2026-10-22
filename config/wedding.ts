@@ -70,7 +70,7 @@ export const wedding = {
       id: 'walimah',
       title: 'Walimah',
       start: '2026-10-31T10:00:00+08:00',
-      timeLabel: '10:00 - Selesai WITA',
+      timeLabel: '11:00 - Selesai WITA',
     },
   ] satisfies WeddingEvent[],
 
@@ -85,17 +85,20 @@ export const wedding = {
     {
       id: '1',
       title: 'Pertemuan Pertama',
-      text: 'Terjadi secara singkat saja, diawali dengan dikenalkan oleh sang anak dari pengantin pria di sebuah cafe yang secara singkat bercerita tentang pengalaman kegagalan berumah tangga.',
+      text: 'Meminta pemilik hati dan sang maha pemberi rizki dan jodoh.',
+      // text: 'Terjadi secara singkat saja, diawali dengan dikenalkan oleh sang anak dari pengantin pria di sebuah cafe yang secara singkat bercerita tentang pengalaman kegagalan berumah tangga.',
     },
     {
       id: '2',
-      title: 'Saling Berkomitmen',
-      text: 'Setelah pertemuan pertama tersebut, selanjutnya disusul dengan 2x pertemuan untuk berbicara tentang visi misi pernikahan dan menentukan untuk berkomitmen.',
+      title: 'Pertemuan Kedua',
+      text: 'Melakukan Ikhtiar.',
+      // text: 'Setelah pertemuan pertama tersebut, selanjutnya disusul dengan 2x pertemuan untuk berbicara tentang visi misi pernikahan dan menentukan untuk berkomitmen.',
     },
     {
       id: '3',
-      title: 'Proposal',
-      text: 'Bertemu secara pribadi dengan keluarga inti pekan selanjutnya untuk pelamaran dengan melibatkan keluarga besar.',
+      title: 'Pertemuan Ketiga',
+      text: 'Berjodoh dengan berkomitmen bersama menjalankan biduk rumah tangga.',
+      // text: 'Bertemu secara pribadi dengan keluarga inti pekan selanjutnya untuk pelamaran dengan melibatkan keluarga besar.',
     },
   ],
 
@@ -114,7 +117,7 @@ export const wedding = {
   } | null,
 
   music: {
-    src: '/audio/wedding-theme.wav',
+    src: '/audio/istikharah-cinta.mp3',
     title: 'Wedding theme',
   },
 

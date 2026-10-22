@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { createContext, useCallback, useContext, useEffect, useRef, useState } from 'react'
 import { Volume2, VolumeX } from 'lucide-react'
 import { wedding } from '@/config/wedding'
 import { Button } from '@/components/ui/button'
@@ -10,6 +10,12 @@ import { cn } from '@/lib/utils'
 type InvitationShellProps = {
   guestName: string | null
   children: React.ReactNode
+}
+
+const InvitationOpenContext = createContext(false)
+
+export function useInvitationOpened() {
+  return useContext(InvitationOpenContext)
 }
 
 export function InvitationShell({ guestName, children }: InvitationShellProps) {
@@ -53,7 +59,7 @@ export function InvitationShell({ guestName, children }: InvitationShellProps) {
   }, [])
 
   return (
-    <>
+    <InvitationOpenContext.Provider value={opened}>
       <audio
         ref={audioRef}
         src={wedding.music.src}
@@ -116,11 +122,11 @@ export function InvitationShell({ guestName, children }: InvitationShellProps) {
           onClick={toggleMusic}
           aria-label={playing ? 'Pause background music' : 'Play background music'}
           aria-pressed={playing}
-          className="fixed bottom-5 right-5 z-40 flex size-12 items-center justify-center rounded-full border border-border bg-card/90 text-primary shadow-lg backdrop-blur transition hover:scale-105 focus-visible:outline-2 focus-visible:outline-ring"
+          className="fixed bottom-20 right-5 z-40 flex size-12 items-center justify-center rounded-full border border-border bg-card/90 text-primary shadow-lg backdrop-blur transition hover:scale-105 focus-visible:outline-2 focus-visible:outline-ring"
         >
           {playing ? <Volume2 className="size-5" /> : <VolumeX className="size-5" />}
         </button>
       )}
-    </>
+    </InvitationOpenContext.Provider>
   )
 }

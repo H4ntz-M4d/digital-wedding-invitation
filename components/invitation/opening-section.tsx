@@ -11,6 +11,7 @@ export function OpeningSection() {
         alt=""
         width={700}
         height={380}
+        loading="eager"
         aria-hidden
         className="pointer-events-none absolute -left-16 -top-10 z-0 w-[26rem] max-w-none opacity-90 mix-blend-multiply animate-[float-slow_9s_ease-in-out_infinite] motion-reduce:animate-none sm:w-[34rem]"
       />
@@ -19,6 +20,7 @@ export function OpeningSection() {
         alt=""
         width={700}
         height={380}
+        loading="eager"
         aria-hidden
         className="pointer-events-none absolute -bottom-16 -right-16 z-0 w-[26rem] max-w-none rotate-180 opacity-90 mix-blend-multiply sm:w-[34rem]"
       />

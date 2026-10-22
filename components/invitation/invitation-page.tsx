@@ -11,6 +11,7 @@ import { RsvpSection, type InviteState } from './rsvp-section'
 import { StorySection } from './story-section'
 import { VenueSection } from './venue-section'
 import { WishesSection } from './wishes-section'
+import { InvitationNav } from './invitation-nav'
 
 export async function InvitationPage({
   searchParams,
@@ -30,19 +31,30 @@ export async function InvitationPage({
 
   return (
     <InvitationShell guestName={invitation?.guest.name ?? null}>
+      <InvitationNav />
       <main>
-        <OpeningSection />
-        <CoupleSection />
-        <EventsSection />
+        <section id="home">
+          <OpeningSection />
+        </section>
+        <section id="couple">
+          <CoupleSection />
+        </section>
+        <section id="events">
+          <EventsSection />
+        </section>
         <VenueSection />
         <StorySection />
-        <GiftSection />
-        <RsvpSection
-          inviteState={inviteState}
-          token={token}
-          guest={invitation ? { name: invitation.guest.name, partySizeLimit: invitation.guest.partySizeLimit } : null}
-          initialRsvp={invitation?.rsvp ?? null}
-        />
+        <section id="gift">
+          <GiftSection />
+        </section>
+        <section id="rsvp">
+          <RsvpSection
+            inviteState={inviteState}
+            token={token}
+            guest={invitation ? { name: invitation.guest.name, partySizeLimit: invitation.guest.partySizeLimit } : null}
+            initialRsvp={invitation?.rsvp ?? null}
+          />
+        </section>
         <WishesSection wishes={wishes} token={token} guestName={invitation?.guest.name ?? null} />
       </main>
       <ClosingSection />

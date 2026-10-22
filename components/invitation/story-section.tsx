@@ -26,6 +26,7 @@ export function StorySection() {
             </li>
           ))}
         </ol>
+        <p className="text-muted-foreground text-pretty text-center mt-18">Semua ini terjadi dengan izin<br /> <span className="text-gold">Allah SWT</span></p>
       </div>
     </section>
   );

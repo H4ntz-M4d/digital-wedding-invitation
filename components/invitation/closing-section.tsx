@@ -12,6 +12,7 @@ export function ClosingSection() {
         width={700}
         height={380}
         aria-hidden
+        loading='eager'
         className="pointer-events-none absolute -left-20 -top-6 z-0 w-[24rem] max-w-none opacity-80 mix-blend-multiply"
       />
       <div className="relative z-10 mx-auto flex max-w-xl flex-col items-center gap-6">
