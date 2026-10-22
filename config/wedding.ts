@@ -133,7 +133,7 @@ export const wedding = {
 
   /** Prefilled WhatsApp message used by the admin share button. {name} and {url} are replaced. */
   whatsappTemplate:
-    'Assalamu’alaikum Warahmatullahi Wabarakatuh. {name},\n\nSegala puji bagi Allah SWT yang telah menciptakan makhluknya berpasang-pasangan. Dengan penuh rasa hormat perkenankan kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara pernikahan kami. \nInformasi lengkap acara kami cantumkan melalui link berikut:\n{url}\n\nMerupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i untuk berkenan hadir serta memberikan doa dan restu. \n\nSemoga Allah memberkahi dan menghimpunkan kami dalam kebaikan dunia dan akhirat. Aamiin.\n\nWassalamu’alaikum Warahmatullahi Wabarakatuh. Kami yang berbahagia,\n\nUddin & Dhanny',
+    'Assalamu’alaikum Warahmatullahi Wabarakatuh. {name},\n\nSegala puji bagi Allah SWT yang telah menciptakan makhluknya berpasang-pasangan. Dengan penuh rasa hormat perkenankan kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara pernikahan kami. \nInformasi lengkap acara kami cantumkan melalui link berikut dan diharapkan untuk konfirmasi kehadirannya dengan mengisi form yang telah disediakan:\n{url}\n\nMerupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i untuk berkenan hadir serta memberikan doa dan restu. \n\nSemoga Allah memberkahi dan menghimpunkan kami dalam kebaikan dunia dan akhirat. Aamiin.\n\nWassalamu’alaikum Warahmatullahi Wabarakatuh. Kami yang berbahagia,\n\nUddin & Dhanny',
 } as const
 
 export const weddingStart = new Date(wedding.events[0].start)

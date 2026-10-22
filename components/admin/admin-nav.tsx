@@ -27,7 +27,7 @@ export function AdminNav({ displayName }: { displayName: string }) {
   return (
     <header className="border-b border-border bg-card">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6">
-        <div className="flex items-center gap-6">
+        <div className="flex md:flex-row flex-col md:items-center items-start md:gap-6 gap-3">
           <span className="font-display text-xl">Wedding admin</span>
           <nav aria-label="Admin" className="flex items-center gap-1">
             {links.map((link) => {
