@@ -18,6 +18,7 @@ const sans = Jost({
 const title = `The Wedding of ${wedding.groom.nickname} & ${wedding.bride.nickname}`
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://dhanny-uddin.site'),
   title,
   description: wedding.opening.message,
   robots: { index: false, follow: false },

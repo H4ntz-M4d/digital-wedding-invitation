@@ -95,7 +95,7 @@ function GuestForm({ initial, onSaved }: { initial: GuestFormValues; onSaved: Gu
           />
         </div>
         <div className="flex flex-col gap-2">
-          <Label htmlFor="guest-phone">WhatsApp number (optional)</Label>
+          <Label htmlFor="guest-phone">WhatsApp number</Label>
           <Input
             id="guest-phone"
             type="tel"
