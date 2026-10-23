@@ -117,7 +117,7 @@ export const wedding = {
   } | null,
 
   music: {
-    src: '/audio/istikharah-cinta.mp3',
+    src: '/audio/maher-zain_baraka-allahu-lakuma.mp3',
     title: 'Wedding theme',
   },
 
